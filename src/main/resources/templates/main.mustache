@@ -1,0 +1,22 @@
+<html>
+
+<body>
+    <div>
+        <form method="post">
+            <input type="text" name="text" placeholder="Введіть повідомлення" />
+            <input type="text" name="tag" placeholder="Тег" />
+            <button type="submit">Додати</button>
+        </form>
+    </div>
+
+    <div>Список повідомлень</div>
+    {{#messages}}
+        <div>
+            <b>{{id}}</b>
+            <span>{{text}}</span>
+            <i>{{tag}}</i>
+        </div>
+    {{/messages}}
+</body>
+
+</html>
