@@ -10,6 +10,10 @@
     </div>
 
     <div>Список повідомлень</div>
+    <form method="post" action="filter">
+        <input type="text" name="filter">
+        <button type = "submit">Знайти</button>
+    </form>
     {{#messages}}
         <div>
             <b>{{id}}</b>
