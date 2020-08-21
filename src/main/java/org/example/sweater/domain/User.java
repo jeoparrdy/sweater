@@ -19,6 +19,46 @@ public class User {
                                                                           // fetch - як саме будуть завантажуватись дані (жадний та лінивий спосіб завантаження, лінивий дял великої кількості записів)
     @CollectionTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id")) //Описує, що дане поле буде зберігатись в окремій таблиці,
     // для якої не описувався меппінг. Це дозволяє на створити таблицю user_role, яка буде з'єднуватись з поточною по колонці user_id
-    @Enumerated(EnumType.STRING)//
+    @Enumerated(EnumType.STRING)//enum
     private Set<Role> roles; //Набір ролей користувача
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
+    }
+
+    public Set<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
+    }
 }
